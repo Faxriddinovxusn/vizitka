@@ -6,53 +6,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      background: #f2f2f2;
-      font-family: Arial, sans-serif;
+      background: #111;
+      color: #f1f1f1;
+      font-family: 'Arial', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
     }
 
     .card {
-      background: white;
+      background: #1c1c1c;
       padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
       text-align: center;
-      width: 300px;
-      animation: fadeIn 0.6s ease-in-out;
+      width: 320px;
+      animation: fadeIn 0.7s ease-in-out;
     }
 
     h1 {
-      color: #6A0DAD;
-      margin-bottom: 30px;
+      color: #00ff00;
+      margin-bottom: 25px;
+      font-size: 24px;
     }
 
     .btn {
       display: block;
-      margin: 15px auto;
-      padding: 12px 20px;
       width: 100%;
+      margin: 12px 0;
+      padding: 14px;
       font-size: 16px;
-      color: white;
-      background: #6A0DAD;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      color: #fff;
+      background: #333;
+      border: 2px solid #00ff00;
+      border-radius: 8px;
       text-decoration: none;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
-      background: #8e24aa;
+      background: #00ff00;
+      color: #000;
       transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(106,13,173,0.4);
+      box-shadow: 0 0 15px #00ff00;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
@@ -60,10 +63,10 @@
 
   <div class="card">
     <h1>Assalomu Aleykum</h1>
-    
-    <a href="tel:+998 99 536 33 80" class="btn">📞 Telefon raqam</a>
-    <a href="#" class="btn">📱 Telegram</a> <https://t.me/faxriddinovhusniddin -->
-    <a href="#" class="btn">📸 Instagram</a> <https://www.instagram.com/fakhriddinov?igsh=bWFscTF0dzV1d290 -->
+
+    <a href="tel:+998995363380" class="btn">📞 Telefon raqam</a>
+    <a href="https://t.me/faxriddinovhusniddin" class="btn">📱 Telegram</a>
+    <a href="https://www.instagram.com/fakhriddinov?igsh=bWFscTF0dzV1d290" class="btn">📸 Instagram</a>
 
   </div>
 
