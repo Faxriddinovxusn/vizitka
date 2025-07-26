@@ -2,82 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Digital Contact</title>
+  <title>Digital Contact</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      background: #f0f0f0;
+      background: #f2f2f2;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    .container {
-      max-width: 500px;
-      margin: 50px auto;
-      background: #fff;
+    .card {
+      background: white;
+      padding: 40px;
       border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       text-align: center;
+      width: 300px;
+      animation: fadeIn 0.6s ease-in-out;
     }
 
     h1 {
       color: #6A0DAD;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
-    .contact {
-      text-align: left;
-      margin-top: 20px;
-    }
-
-    .contact p {
-      font-size: 18px;
-      margin: 10px 0;
-    }
-
-    .contact a {
-      color: #6A0DAD;
+    .btn {
+      display: block;
+      margin: 15px auto;
+      padding: 12px 20px;
+      width: 100%;
+      font-size: 16px;
+      color: white;
+      background: #6A0DAD;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
       text-decoration: none;
-      font-weight: bold;
     }
 
-    .contact a:hover {
-      text-decoration: underline;
+    .btn:hover {
+      background: #8e24aa;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(106,13,173,0.4);
     }
 
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        margin: 20px;
-        padding: 20px;
-      }
-
-      .contact p {
-        font-size: 16px;
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <img src="https://via.placeholder.com/120" alt="Avatar" class="avatar">
-    <h1>Ismingni yoz</h1>
+  <div class="card">
+    <h1>Assalomu Aleykum</h1>
+    
+    <a href="tel:+998 99 536 33 80" class="btn">📞 Telefon raqam</a>
+    <a href="#" class="btn">📱 Telegram</a> <https://t.me/faxriddinovhusniddin -->
+    <a href="#" class="btn">📸 Instagram</a> <https://www.instagram.com/fakhriddinov?igsh=bWFscTF0dzV1d290 -->
 
-    <div class="contact">
-      <p><strong>📞 Telefon:</strong> <a href="tel:+998935363380">+998995363380</a></p>
-      <p><strong>📱 Telegram:</strong> <a href="https://t.me/faxriddinovhusniddin">t.me/your_username</a></p>
-      <p><strong>📸 Instagram:</strong> <a href="https://www.instagram.com/fakhriddinov?igsh=bWFscTF0dzV1d290">instagram.com/your_username</a></p>
-    </div>
   </div>
 
 </body>
