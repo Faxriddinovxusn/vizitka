@@ -1,74 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Digital Contact</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Card</title>
   <style>
     body {
-      background: #111;
-      color: #f1f1f1;
-      font-family: 'Arial', sans-serif;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0a0a0a, #1f1f1f);
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+      min-height: 100vh;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .card {
-      background: #1c1c1c;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+      background: #141414;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      max-width: 400px;
       text-align: center;
-      width: 320px;
-      animation: fadeIn 0.7s ease-in-out;
+      border: 1px solid #333;
+      position: relative;
     }
 
-    h1 {
-      color: #00ff00;
-      margin-bottom: 25px;
+    .card h2 {
+      margin-bottom: 8px;
       font-size: 24px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 8px;
     }
 
     .btn {
       display: block;
       width: 100%;
       margin: 12px 0;
-      padding: 14px;
-      font-size: 16px;
-      color: #fff;
-      background: #333;
-      border: 2px solid #00ff00;
+      padding: 12px;
+      border: none;
       border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #2a2a2a;
+      color: white;
+      transition: background 0.3s;
       text-decoration: none;
-      transition: all 0.3s ease;
     }
 
     .btn:hover {
-      background: #00ff00;
-      color: #000;
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #00ff00;
+      background-color: #444;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
+    
+
+    .info {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #999;
+    }
+
+    .plastic-card {
+      margin: 32px 0 0 0;
+      padding: 20px 16px 16px 16px;
+      background: linear-gradient(120deg, #232526 0%, #414345 100%);
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      color: #fff;
+      text-align: left;
+      position: relative;
+    }
+
+    .plastic-card .card-label {
+      font-size: 13px;
+      color: #bbb;
+      margin-bottom: 4px;
+      letter-spacing: 1px;
+    }
+
+    .plastic-card .card-name {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .plastic-card .card-number-container {
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .plastic-card .card-number {
+      font-size: 20px;
+      font-family: 'Segoe UI Mono', monospace;
+      letter-spacing: 2px;
+      background: rgba(255,255,255,0.07);
+      padding: 7px 14px;
+      border-radius: 8px;
+      user-select: all;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .plastic-card .card-number:hover {
+      background: rgba(255,255,255,0.18);
+    }
+
+    .plastic-card .copy-msg {
+      font-size: 12px;
+      color: #6ee7b7;
+      margin-left: 10px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .plastic-card .copy-msg.active {
+      opacity: 1;
     }
   </style>
 </head>
 <body>
-
   <div class="card">
-    <h1>Assalomu Aleykum</h1>
+    <h2>Fakhriddinov Khusniddin</h2>
 
-    <a href="tel:+998995363380" class="btn">📞 Telefon raqam</a>
-    <a href="https://t.me/faxriddinovhusniddin" class="btn">📱 Telegram</a>
-    <a href="https://www.instagram.com/fakhriddinov?igsh=bWFscTF0dzV1d290" class="btn">📸 Instagram</a>
+    
+    <a href="https://t.me/faxriddinovhusniddin" class="btn">Telegram</a>
+    <a href="https://www.instagram.com/fakhriddinov?igsh=bWFscTF0dzV1d290" class="btn">Instagram</a>
+    <a href="tel:+998 99 536 33 80" class="btn">Phone 1: +998 99 536 33 80</a>
+    <a href="tel:+998 93 411 67 47" class="btn">Phone 2: +998 93 411 67 47</a>
 
+    <div class="info">
+      <!-- Additional information -->
+    </div>
+
+
+    <div class="plastic-card">
+      <div class="card-label">Plastic Card</div>
+      <div class="card-name">Fakhriddinov Khusniddin</div>
+      <div class="card-number-container">
+        <div class="card-number" id="cardNumber" onclick="copyCardNumber()">
+          9860 1201 0718 3945
+        </div>
+        <span class="copy-msg" id="copyMsg">Скопировано!</span>
+      </div>
+    </div>
   </div>
-
+  <script>
+    function copyCardNumber() { 
+      const cardNumber = document.getElementById('cardNumber').innerText.trim();
+      if (!cardNumber) return;
+      navigator.clipboard.writeText(cardNumber);
+      const msg = document.getElementById('copyMsg');
+      msg.classList.add('active');
+      setTimeout(() => msg.classList.remove('active'), 1200);
+    }
+  </script>
 </body>
 </html>
